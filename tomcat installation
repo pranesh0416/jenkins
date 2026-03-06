@@ -1,0 +1,21 @@
+$wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.91.zip
+
+$apt install unzip -y
+$unzip apache-tomcat-9.0.91.zip
+$cd apache-tomcat-9.0.91
+
+navigate
+cd conf
+ls
+
+open server.xml
+locate connector port where port no is 8080 change to 9090
+
+navigat
+cd..
+cd bin
+ls
+chmod +x *.sh
+./startup.sh
+
+edit the inbound rules
