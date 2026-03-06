@@ -1,0 +1,9 @@
+wget https://raw.githubusercontent.com/akshu20791/Deployment-script/refs/heads/main/jenkins.sh
+chmod 700 jenkins.sh
+./jenkins.sh
+
+change inbound rules custom tcp 8080
+
+run jenkins
+
+copy paste the password
