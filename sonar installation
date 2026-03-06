@@ -20,18 +20,23 @@ psql --version
 sudo -i -u postgres
 
 
-createuser ddsonar
+createuser ddsonar//preferred username
+**createuser thomas**
+
 psql
+
 step 4
 ALTER USER [Created_user_name] WITH ENCRYPTED password 'my_strong_password';
-ALTER USER ddsonar WITH ENCRYPTED password 'mwd#2%#!!#%rgs';
+**ALTER USER thomas WITH ENCRYPTED password 'grace';**
+
 // create a user and password
 
 CREATE DATABASE [database_name] OWNER [Created_user_name];
-CREATE DATABASE ddsonarqube OWNER ddsonar;
+**CREATE DATABASE garisson OWNER thomas;**
 //create a database and set owner
 
 GRANT ALL PRIVILEGES ON DATABASE ddsonarqube to ddsonar;
+**GRANT ALL PRIVILEGES ON DATABASE garissonn to thomas;**
 
 \l #to check the created database
 
@@ -50,8 +55,13 @@ sudo mv sonarqube /opt/
 step 6
 
 sudo groupadd ddsonar//create user
+**sudo groupadd thomas**
+
 sudo useradd -d /opt/sonarqube -g ddsonar ddsonar //create a using and setting home directory
+**sudo useradd -d /opt/sonarqube -g thomas thomas**
+
 sudo chown ddsonar:ddsonar /opt/sonarqube -R //granting access
+**sudo chown thomas:thomas /opt/sonarqube -R** 
 
 step 7
 
@@ -60,20 +70,26 @@ configure sona //most important
 sudo nano /opt/sonarqube/conf/sonar.properties
 find these lines under database -important -usercredentials-
 #sonar.jdbc.username=give the name in step 4 psql
+**sonar.jdbc.username=thomas**
 
 #sonar.jdbc.password=give the altered password in step 4 psql
+**sonar.jdbc.password=grace**
 
 sonar.jdbc.url=jdbc:postgresql://localhost:5432/give the name of the database created in step4
+**sonar.jdbc.url=jdbc:postgresql://localhost:5432/garisson**
 
 save and exit
 open 
 sudo nano /opt/sonarqube/bin/linux-x86-64/sonar.sh
 edit the at the top of the name
 RUN_AS_USER=give the name created in sonar step6
-
+**RUN_AS_USER=thomas**
 save and exit
 
 open a new file
+edit inside the file
+**user=thomas**
+**Group=thomas**
 sudo nano /etc/systemd/system/sonar.service
 before opening remember to give the same group name and password as step 6
 [Unit]
