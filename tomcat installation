@@ -1,8 +1,8 @@
-$wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.91.zip
+$wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.115.zip
 
 $apt install unzip -y
-$unzip apache-tomcat-9.0.91.zip
-$cd apache-tomcat-9.0.91
+$unzip apache-tomcat-9.0.115.zip
+$cd apache-tomcat-9.0.115
 
 navigate
 cd conf
@@ -19,3 +19,12 @@ chmod +x *.sh
 ./startup.sh
 
 edit the inbound rules
+open visudo in instance ec2
+jenkins ALL=(ALL:ALL) NOPASSWD: ALL
+then save and exit
+
+restart jenkins
+$service jenkins restart
+relogin into jenkins
+
+build
