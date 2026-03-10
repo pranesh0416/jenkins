@@ -7,7 +7,7 @@ install sonarqube scanner plugin in jenkins
 
 click on manage credentials and select credentials
 click on global and adding some credentials
-select secret 
+select secret text
 create id
 
 come back to manage jenkins and system
