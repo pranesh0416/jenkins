@@ -1,8 +1,7 @@
-$wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.115.zip
-
-$apt install unzip -y
-$unzip apache-tomcat-9.0.115.zip
-$cd apache-tomcat-9.0.115
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.115/bin/apache-tomcat-9.0.115.zip
+apt install unzip -y
+unzip apache-tomcat-9.0.115.zip
+cd apache-tomcat-9.0.115
 
 navigate
 cd conf
@@ -12,7 +11,7 @@ open server.xml
 locate connector port where port no is 8080 change to 9090
 
 navigat
-cd..
+cd ..
 cd bin
 ls
 chmod +x *.sh
