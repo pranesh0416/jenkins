@@ -1,0 +1,18 @@
+sonar admisnistration
+security and users
+click on three dots
+enter the token name and generate token and copy it
+
+install sonarqube scanner plugin in jenkins
+
+click on manage credentials and select credentials
+click on global and adding some credentials
+select secret 
+create id
+
+come back to manage jenkins and system
+go to sonarqube section
+click on env var and click on add sonar qube
+provide name and server url default 
+http://localhost:9000
+select authentication key
