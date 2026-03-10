@@ -42,7 +42,9 @@ GRANT ALL PRIVILEGES ON DATABASE ddsonarqube to ddsonar;
 
 \du to check database user
 
-\q for exit
+\q 
+exit
+#logout
 
 installing
 sudo apt install zip -y
