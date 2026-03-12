@@ -32,11 +32,11 @@ ALTER USER [Created_user_name] WITH ENCRYPTED password 'my_strong_password';
 // create a user and password
 
 CREATE DATABASE [database_name] OWNER [Created_user_name];
-**CREATE DATABASE garisson OWNER thomas;**
+**CREATE DATABASE thomas OWNER thomas;**
 //create a database and set owner
 
 GRANT ALL PRIVILEGES ON DATABASE ddsonarqube to ddsonar;
-**GRANT ALL PRIVILEGES ON DATABASE garissonn to thomas;**
+**GRANT ALL PRIVILEGES ON DATABASE thomas to thomas;**
 
 \l #to check the created database
 
@@ -78,7 +78,7 @@ find these lines under database -important -usercredentials-
 **sonar.jdbc.password=grace**
 
 sonar.jdbc.url=jdbc:postgresql://localhost:5432/give the name of the database created in step4
-**sonar.jdbc.url=jdbc:postgresql://localhost:5432/garisson**
+**sonar.jdbc.url=jdbc:postgresql://localhost:5432/thomas**
 
 save and exit
 open 
