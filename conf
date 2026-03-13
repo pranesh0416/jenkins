@@ -1,3 +1,29 @@
+copy paste the password
+for email
+manage jenkins and configure system
+under emailnotifications smtp server
+email and domain
+under advanced click use smtp usenthaticaztion provide deatils
+and password
+use ssl
+smtp port 465
+test configuration click
+give email and check
+
+go to gmail manage account and security
+switch on two step verfication
+give phone no
+
+search for app password
+give other and generate passowrd
+replace password in smtp
+
+check test configuration
+save
+
+
+
+
 sonar admisnistration
 security and users
 click on three dots
