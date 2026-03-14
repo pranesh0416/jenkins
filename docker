@@ -1,0 +1,7 @@
+$sudo su
+$sudo yum install docker -y
+once docker is installed check if it is running-
+$docker run hello-world
+$systemctl start docker (docker daemon runs in the background)
+$systemctl status docker
+
