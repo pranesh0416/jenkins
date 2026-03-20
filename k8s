@@ -1,0 +1,11 @@
+sudo kubeadm init
+sudo swapoff -a
+sudo sed -i '/ swap / s/^/#/' /etc/fstab
+sudo modprobe br_netfilter
+echo '1' | sudo tee /proc/sys/net/bridge/bridge-nf-call-iptables
+echo '1' | sudo tee /proc/sys/net/ipv4/ip_forward
+sudo systemctl restart docker
+sudo systemctl restart kubelet
+sudo kubeadm reset -f
+
+Add --cri-socket unix:///var/run/cri-dockerd.sock 
