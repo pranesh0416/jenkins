@@ -10,7 +10,9 @@ vpc cni
 coredns
 kube proxy
 
-add cbs driver
+go to identity provider oidc with sts.amazonaws.com and create role add policy AmazonEBSCSIDriverPolicy create
+in trust policy add sub:"system:serviceaccount:kube-system:ebs-csi-controller-sa"
+add cbs driver with the above role
 
 create an ec2 instane acting as the main project server
 linux
